@@ -1,7 +1,6 @@
 const startTime = new Date();
 const updateTotalTimeSpent = () => {
-  const currentTime = new Date();
-  document.querySelector('#timeSpent').innerHTML = `${(currentTime - startTime) / 1000} Seconds`;
+  document.querySelector('#timeSpent').innerHTML = moment(startTime).fromNow(true);
 }
 
 const updateTimeSpentRecursively = () => {
