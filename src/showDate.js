@@ -1,5 +1,5 @@
 import moment from "moment";
 
-const showDate = () => {
+export default () => {
   document.querySelector('#date').innerHTML = moment().format("dddd, MMMM Do YYYY");
 }
