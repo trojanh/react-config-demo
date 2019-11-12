@@ -1,5 +1,7 @@
+import React from "react";
 import moment from "moment";
 
 export default () => {
-  document.querySelector('#date').innerHTML = moment().format("dddd, MMMM Do YYYY");
+  const date = moment().format("dddd, MMMM Do YYYY");
+  return (<div>Today's Date: <b>{date}</b></div>);
 }

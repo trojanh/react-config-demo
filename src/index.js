@@ -1,14 +1,14 @@
-import moment from "moment";
-import showDate from "./showDate";
+import React from "react";
+import ReactDOM from "react-dom";
 
-const startTime = new Date();
-const updateTotalTimeSpent = () => {
-  document.querySelector('#timeSpent').innerHTML = moment(startTime).fromNow(true);
-}
+import ShowDate from "./ShowDate";
+import TimeSpent from "./TimeSpent";
 
-const updateTimeSpentRecursively = () => {
-  updateTotalTimeSpent()
-  setTimeout(updateTimeSpentRecursively, 500);
-}
-updateTimeSpentRecursively();
-showDate();
+ReactDOM.render(
+  <div>
+    <h4>This page shows total time you have spent on this page</h4>
+    <TimeSpent />
+    <ShowDate />
+  </div>,
+  document.getElementById('app')
+);
